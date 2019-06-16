@@ -16,6 +16,10 @@ using namespace std;
 int main()
 {
 	testAlgo();
+	/*
+	Below lines are commented out for testing purpose.
+	It can be enabled for testing the multi threading.
+	*/
 	//tester();
 	/*STDThread std;
 	std.start();*/
