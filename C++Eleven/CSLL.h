@@ -26,5 +26,7 @@ private:
 	bool circular();
 	int count();
 	bool isloop();
+	void sort();
+	void createloop();
 };
 

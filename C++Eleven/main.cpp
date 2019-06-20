@@ -11,13 +11,14 @@
 #include "CKeyWords.h"
 #include "Algorithms.h"
 #include "CSLL.h"
+#include "CDLL.h"
 
 using namespace std;
 
 int main()
 {
-	CSLL sl;
-	sl.main();
+	CDLL dl;
+	dl.main();
 	/*
 	testAlgo();
 	

@@ -10,6 +10,9 @@ CSLL::~CSLL()
 
 void CSLL::main()
 {
+	createloop();
+	cout << endl << "IS LOOP is " << isloop() << endl;
+	return;
 	//head = new node;
 	/*push_front(4);
 	push_front(3);
@@ -19,11 +22,11 @@ void CSLL::main()
 
 	//display(head);
 
-	push_back(6);
+	push_back(11);
 	push_back(8);
-	push_back(2);
-	push_back(4);
-	push_back(5);
+	push_back(23);
+	push_back(14);
+	push_back(50);
 	count();
 	display(head);
 
@@ -37,7 +40,12 @@ void CSLL::main()
 	count();
 	display(head);
 
-	cout << "Circular is " << circular() << endl;;
+	cout << "Circular is " << circular() << endl;
+
+	cout << "SORT " << endl;
+	sort();
+	count();
+	display(head);
 }
 
 void CSLL::push_back(int data, bool flag)
@@ -161,5 +169,78 @@ int CSLL::count()
 
 bool CSLL::isloop()
 {
+	node * p, *q;
+	p = head;
+	//q = head;
 
+	do
+	{
+		p = p->next;
+		q = p->next->next->next;
+	} 
+	while (p != q && p && q);
+
+	if (p == q && p && q)
+		return true;
+
+	return false;
+}
+
+void CSLL::sort()
+{
+	bool flag = false;
+	node * p = nullptr;
+
+	while (!flag)
+	{
+		p = head;
+		flag = true;
+		while (p->next)
+		{
+			if (p->data > p->next->data)
+			{
+				int t = p->next->data;
+				p->next->data = p->data;
+				p->data = t;
+				flag = false;
+			}
+			p = p->next;
+		}
+	}
+}
+
+void CSLL::createloop()
+{
+	int a[] = { 12, 23, 34, 45, 56 };
+	node * p = nullptr;
+
+	for (int i = 0; i < 5; i++)
+	{
+		node * t = new node;
+		t->data = a[i];
+
+		if (i != 4)
+			t->next = nullptr;
+		else
+			t->next = p;
+		node * q = head;
+
+		if (q == nullptr)
+		{
+			head = t;
+		}
+		else
+		{
+			while (q->next)
+			{
+				q = q->next;
+			}
+			q->next = t;
+
+			if (i == 2)
+			{
+				p = t;
+			}
+		}
+	}
 }
