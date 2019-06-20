@@ -144,7 +144,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CDLL.cpp" />
     <ClCompile Include="Consumer.cpp" />
+    <ClCompile Include="CSLL.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Producer.cpp" />
     <ClCompile Include="Pthread.cpp" />
@@ -152,8 +154,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithms.h" />
+    <ClInclude Include="CDLL.h" />
     <ClInclude Include="CKeyWords.h" />
     <ClInclude Include="Consumer.h" />
+    <ClInclude Include="CSLL.h" />
     <ClInclude Include="Producer.h" />
     <ClInclude Include="Pthread.h" />
     <ClInclude Include="Queue.h" />

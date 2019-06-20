@@ -10,13 +10,17 @@
 #include "STDThread.h"
 #include "CKeyWords.h"
 #include "Algorithms.h"
+#include "CSLL.h"
 
 using namespace std;
 
 int main()
 {
-	testAlgo();
+	CSLL sl;
+	sl.main();
 	/*
+	testAlgo();
+	
 	Below lines are commented out for testing purpose.
 	It can be enabled for testing the multi threading.
 	*/
