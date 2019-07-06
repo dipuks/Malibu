@@ -12,14 +12,34 @@
 #include "Algorithms.h"
 #include "CSLL.h"
 #include "CDLL.h"
+#include "CStack.h"
+#include "CQueueEx.h"
+#include "CBST.h"
 
 using namespace std;
 
 int main()
 {
+	CBST st;
+	cout << "Going to Insert" << endl;
+	st.insert(23);
+	st.insert(55);
+	st.insert(12);
+	st.insert(69);
+	st.insert(50);
+	st.insert(38);
+	cout << "Going to PRINT PreOrder" << endl;
+	st.preorder(st.get());
+	cout << "Going to PRINT InOrder" << endl;
+	st.inorder(st.get());
+	cout << "Going to PRINT PostOrder" << endl;
+	st.postorder(st.get());
+	
+
+	/*
 	CDLL dl;
 	dl.main();
-	/*
+	
 	testAlgo();
 	
 	Below lines are commented out for testing purpose.
