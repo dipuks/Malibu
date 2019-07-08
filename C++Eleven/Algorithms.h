@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
 bool isPal(const char * str)
@@ -81,9 +81,54 @@ void swap(int a, int b)
 	cout << "After swap - a is " << a << "  b is " << b << endl;
 }
 
+vector<int> distributeCandies(int candies, int num_people) {
+	int c = 1, d = 0;
+	vector <int> v;
+	v.resize(num_people);
+	while (d < candies)
+	{
+		for (int i = 0; i < num_people; i++)
+		{
+			v[i] = c;
+			//v.push_back(c);
+			d += c;
+			c++;
+			if (candies - d <= c)
+				c = candies - d;
+		}
+	}
+	return v;
+}
+
+string defangIPaddr(string address) {
+	string s = "[.]";
+	string ret = "";
+
+	for (int i = 0; i < address.length(); i++)
+	{
+		if (s[i] == '.')
+		{
+			ret += s;
+		}
+		else
+		{
+			ret += s[i];
+		}
+	}
+	return ret;
+}
+
 void testAlgo()
 {
-	swap(52,13);
+	string s = defangIPaddr("1.1.1.1");
+	
+	return;
+	vector <int> v = distributeCandies(10, 3);
+	for (auto i : v)
+	{
+		cout << i << endl;
+	}
+	//swap(52,13);
 	//fib(10);
 //	cout << "Total odd number is " << totalOdds(5) << endl;
 	//cout << "Factorial is " << fact(5) << endl;

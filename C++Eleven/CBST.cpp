@@ -82,5 +82,39 @@ void CBST::remove(int data)
 
 int CBST::search()
 {
+
 	return 0;
+}
+
+int CBST::maxdepth(leaf* t)
+{
+	queue <leaf*> l;
+	l.push(t);
+	int depth = 0;
+
+	while (true)
+	{
+		int leafcount = l.size();
+
+		if (leafcount == 0)
+			return depth;
+
+		depth++;
+
+		while (leafcount > 0)
+		{
+			leaf* temp = l.front();
+			l.pop();
+
+			if (temp->left != nullptr)
+				l.push(temp->left);
+			if (temp->right != nullptr)
+				l.push(temp->right);
+			leafcount--;
+		}
+
+	}
+
+
+	return depth;
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <queue>
 using namespace std;
 
 class CBST
@@ -24,7 +25,8 @@ public:
 	void postorder(leaf* t);
 	void remove (int data);
 	int search();
-
+	int maxdepth(leaf* t);
+	
 	leaf* get() { return root; }
 
 

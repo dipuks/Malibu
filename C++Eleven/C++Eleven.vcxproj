@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClCompile Include="CBST.cpp" />
     <ClCompile Include="CDLL.cpp" />
+    <ClCompile Include="CHeap.cpp" />
     <ClCompile Include="Consumer.cpp" />
     <ClCompile Include="CQueueEx.cpp" />
     <ClCompile Include="CSLL.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="Algorithms.h" />
     <ClInclude Include="CBST.h" />
     <ClInclude Include="CDLL.h" />
+    <ClInclude Include="CHeap.h" />
     <ClInclude Include="CKeyWords.h" />
     <ClInclude Include="Consumer.h" />
     <ClInclude Include="CQueueEx.h" />

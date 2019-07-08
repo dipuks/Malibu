@@ -45,6 +45,9 @@
     <ClCompile Include="CBST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CHeap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Pthread.h">
@@ -84,6 +87,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CBST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHeap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
