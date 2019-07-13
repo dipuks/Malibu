@@ -118,16 +118,62 @@ string defangIPaddr(string address) {
 	return ret;
 }
 
+int fibo(int n)
+{
+	if (n == 0)
+	{
+		return 0;
+	}
+	else if (n == 1)
+	{
+		return 1;
+	}
+	else
+	{
+		return fibo(n - 1) + fibo(n - 2);
+	}
+}
+
+bool unique(char* c, int n)
+{
+	int alphas[26] = { 0 };
+	int i = 0;
+	while (i < n)
+	{
+		if (alphas[c[i] - 'a'] > 0)
+			return false;
+		alphas[c[i] - 'a']++;
+		i++;
+	}
+	return true;
+}
+
+char* urlify(char* c, int n)
+{
+	char* ret = new char[n+1];
+
+	for (int i = 0; i < n; i++)
+	{
+		if (c[i] != ' ')
+			ret[i] = c[i];
+		else
+			ret[i] = '%20';
+	}
+	ret[n + 1] = '\0';
+	return ret;
+}
+
 void testAlgo()
 {
-	string s = defangIPaddr("1.1.1.1");
+	cout << "urlify value is " << urlify("my home page", 12) << endl;
+	/*string s = defangIPaddr("1.1.1.1");
 	
 	return;
 	vector <int> v = distributeCandies(10, 3);
 	for (auto i : v)
 	{
 		cout << i << endl;
-	}
+	}*/
 	//swap(52,13);
 	//fib(10);
 //	cout << "Total odd number is " << totalOdds(5) << endl;

@@ -15,28 +15,45 @@
 #include "CStack.h"
 #include "CQueueEx.h"
 #include "CBST.h"
+#include "CArrays.h"
+#include "CHeap.h"
 
 using namespace std;
 
+
 int main()
 {
-	
-	CBST st;
-	cout << "Going to Insert" << endl;
+	CHeap hp;
+	hp.minheap();
+	//testAlgo();
+	/*CArrays ar;
+	ar.set(23);
+	ar.set(44);
+	ar.set(10);
+	ar.set(39);
+	ar.set(7);
+	ar.print();
+	cout << "getting 3 = " << ar.get(3) << endl;
+	ar.insert(2, 90);
+	ar.print();
+	ar.remove(4);
+	ar.print();*/
+	/*CHeap st;
+	cout << "Going to minheap" << endl;
 
-	st.insert(10);
-	st.insert(25);
-	st.insert(9);
-	st.insert(35);
-	st.insert(7);
-	st.insert(12);
-	cout << "Going to PRINT PreOrder" << endl;
-	st.preorder(st.get());
-	cout << "Going to PRINT InOrder" << endl;
+	st.minheap(10);
+	st.minheap(25);
+	st.minheap(9);
+	st.minheap(35);
+	st.minheap(7);
+	st.minheap(12);
+	cout << "Going to PRINT minheap" << endl;
+	st.inorder(st.get());*/
+	/*cout << "Going to PRINT InOrder" << endl;
 	st.inorder(st.get());
 	cout << "Going to PRINT PostOrder" << endl;
 	st.postorder(st.get());
-	cout << "MAX Depth is " << st.maxdepth(st.get()) << endl;
+	cout << "MAX Depth is " << st.maxdepth(st.get()) << endl;*/
 	
 
 	/*

@@ -144,6 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CArrays.cpp" />
     <ClCompile Include="CBST.cpp" />
     <ClCompile Include="CDLL.cpp" />
     <ClCompile Include="CHeap.cpp" />
@@ -158,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithms.h" />
+    <ClInclude Include="CArrays.h" />
     <ClInclude Include="CBST.h" />
     <ClInclude Include="CDLL.h" />
     <ClInclude Include="CHeap.h" />
