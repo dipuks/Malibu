@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
 
 bool isPal(const char * str)
@@ -163,9 +164,92 @@ char* urlify(char* c, int n)
 	return ret;
 }
 
+void fizzbuzz(int val)
+{
+	cout << "Printing numbers ....." << endl;
+	for (int i = 1; i <= val; i++)
+	{
+		if (i % 3 == 0 && i % 5 == 0)
+			cout << "FizzBuzz" << endl;
+		else if (i % 5 == 0)
+			cout << "Buzz" << endl;
+		else if (i % 3 == 0)
+			cout << "Fizz" << endl;
+		else
+			cout << i << endl;
+	}
+}
+
+void ceasercipher(char* c)
+{
+	cout << "decrypted = " << c << endl;
+	int len = strlen(c);
+	char* n = new char[len+1];
+	memset(n, 0, len);
+	n[len] = '\0';
+	for (int i = 0; i < len; i++)
+	{
+		char temp = c[i] + 3;
+		n[i] += temp;
+	}
+	cout << "encrypted = " << n << endl;
+	char* n1 = new char[len+1];
+	memset(n1, 0, len);
+	n1[len] = '\0';
+	for (int i = 0; i < len; i++)
+	{
+		char temp = n[i] - 3;
+		n1[i] += temp;
+	}
+	cout << "decrypted = " << n1 << endl;
+}
+
+string stringreverse(char * c)
+{
+	int len = strlen(c);
+	string t = c;
+	if (len == 1) return c;
+	int i = 0, j = len - 1;
+	while (i != j)
+	{
+		char temp = t[i];
+		t[i] = t[j];
+		t[j] = temp;
+		i++;
+		j--;
+	}
+	return t;
+}
+
+// a[] = {2, 3, 6, 9, 10}		b[] = {3, 5, 7, 9}
+int * intersections(int a[], int an, int b[], int bn)
+{
+	map <int, int> m;
+	int ret[10] = { -1 };
+	int k = 0;
+	pair<std::map<int, int>::iterator, bool> flag;
+	for (int i = 0; i < an; i++)
+	{
+		flag = m.insert(pair<int, int>(a[i], 0));
+	}
+	for (int i = 0; i < bn; i++)
+	{
+		flag = m.insert(pair<int, int>(b[i], 0));
+		if (flag.second == false)
+		{
+			ret[k] = b[i];
+			k++;
+		}
+	}
+	return ret;
+}
+
 void testAlgo()
 {
-	cout << "urlify value is " << urlify("my home page", 12) << endl;
+	int a[] = { 2, 6, 9, 10 };
+	int b[] = { 3, 5, 7, 9 };
+	intersections(a, 4, b, 4);
+	//cout << "urlify value is " << urlify("my home page", 12) << endl;
 	/*string s = defangIPaddr("1.1.1.1");
 	
 	return;

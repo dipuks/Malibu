@@ -17,14 +17,17 @@
 #include "CBST.h"
 #include "CArrays.h"
 #include "CHeap.h"
-
+#include "CGraph.h"
 using namespace std;
 
 
 int main()
 {
-	CHeap hp;
-	hp.minheap();
+	CGraph g;
+	g.mainGraph();
+	//testAlgo();
+	/*CHeap hp;
+	hp.minheap();*/
 	//testAlgo();
 	/*CArrays ar;
 	ar.set(23);
